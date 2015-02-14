@@ -12,12 +12,12 @@ var source = require('vinyl-source-stream');
 
 var stylePath = path.join(__dirname, 'style/*.less');
 var scriptPath = [
-    'scripts/app.js',
-    'scripts/actions/*.js',
-    'scripts/components/*.js',
-    'scripts/dispatcher/*.js',
-    'scripts/stores/*.js',
-    'scripts/constants/*.js'
+    'script/app.js',
+    'script/actions/*.js',
+    'script/components/*.js',
+    'script/dispatcher/*.js',
+    'script/stores/*.js',
+    'script/constants/*.js'
 ];
 var scriptLibPath = [ ];
 
@@ -49,7 +49,7 @@ gulp.task('libs', function() {
 });
 
 gulp.task('script', function() {
-    return browserify(path.join(__dirname, 'scripts/app.js')).bundle()
+    return browserify(path.join(__dirname, 'script/app.js')).bundle()
         .pipe(source('bundle.js'))
         .pipe(gulp.dest('source/js'))
 });

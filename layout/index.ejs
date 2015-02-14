@@ -33,8 +33,7 @@
   <footer id="footer" class="inner"> </footer>
   <script src="js/bundle.js"></script>
   <script type="text/javascript" charset="utf-8">
-      var config = <%= config %>;
-      var theme = <%= theme %>
+      var config = <%- JSON.stringify(theme) %>
   </script>
 </body>
 </html>
